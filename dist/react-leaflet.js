@@ -5621,7 +5621,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  Marker.prototype.render = function render() {
-	    return this.props.children || null;
+	    return Array.isArray(this.props.children) ? _react2.default.createElement(
+	      'div',
+	      null,
+	      this.props.children
+	    ) : this.props.children || null;
 	  };
 
 	  return Marker;
